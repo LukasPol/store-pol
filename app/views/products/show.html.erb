@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-5 text-center">
+    <%= image_tag(@product.photo, height: '200') %>
+  </div>
+  <div class="col-7">
+    <h4 class="text-muted"><%= @product.name %></h4>
+    <p><%= @product.description %></p>
+    <h3 class="my-3 font-weight-bold">
+      <%= number_to_currency(@product.price, unit: 'R$', separator: ',', delimiter: "") %>
+    </h3>
+    <p><%= @product.quantity %> quantidades</p>
+    <br>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+</div>
+
+
+<%= link_to 'Back', products_path %>
