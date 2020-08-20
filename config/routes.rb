@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: 'products#index'
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   devise_for :users
-  resources :products, only: [:index, :show]
+
+  resources :categories, path: 'categoria', only: [:index, :show], param: :alias
+  resources :products, path: 'produto', only: [:index, :show], param: :alias
 end
