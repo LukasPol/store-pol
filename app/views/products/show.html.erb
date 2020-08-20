@@ -8,11 +8,11 @@
     <h3 class="my-3 font-weight-bold">
       <%= number_to_currency(@product.price, unit: 'R$', separator: ',', delimiter: "") %>
     </h3>
-    <p><%= @product.quantity %> quantidades</p>
+    <p><%= t(:text_quantity, scope: 'activerecord.attributes.product', quantity: @product.quantity).pluralize %> </p>
     <br>
-    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-primary"><%= t(:buy) %></button>
   </div>
 </div>
 
 
-<%= link_to 'Back', category_path(@product.category.alias) %>
+<%= link_to t(:back), category_path(@product.category.alias) %>
