@@ -1,8 +1,6 @@
 <p>
-  <strong><%= t('name', scope: 'activerecord.attributes.category')%>:</strong>
+  <strong><%= t(:name, scope: 'activerecord.attributes.category')%>:</strong>
   <%= @category.name %>
 </p>
-
-<%= link_to t(:back), categories_path %>
 
 <%= render @products %>
