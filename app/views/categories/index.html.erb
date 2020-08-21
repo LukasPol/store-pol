@@ -1,5 +1,18 @@
 <h1><%= t(:category, scope: 'activerecord.models') %></h1>
 
+<%= search_form_for @q, class: 'col-md-6 col-lg-4 d-flex' do |f| %>
+  <div class="form-group mr-2">
+    <%= f.search_field :name_cont,
+                        class: 'form-control', 
+                        placeholder: t(:name, scope: 'activerecord.attributes.category') %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit t(:search), class: "btn btn-primary" %>
+  </div>
+
+<% end %>
+
 <table>
   <thead>
     <tr>

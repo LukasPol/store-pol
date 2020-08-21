@@ -12,12 +12,16 @@ pt-BR:
 
   back: "Voltar"
   close: "Fechar"
+  clean: "Limpar"
   destroy: "Deletar"
   details: "Visualizar"
   edit: "Editar"
   exit: "Sair"
   search: "Buscar"
   show: "Visualizar"
+
+  maximun: "Máximo"
+  minimun: "Mínimo"
 
   sign_in: "Entrar"
   sign_out: "Sair"
@@ -41,7 +45,7 @@ pt-BR:
       product:
         &default
         aias: "apelido"
-        name: "Produto"
+        name: "Nome"
         description: "Descrição"
         price: "Preço"
         quantity: "Quantidade"
