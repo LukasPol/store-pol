@@ -29,7 +29,7 @@ pt-BR:
         updated_at: "Atualizado em"
       category:
         &default
-        name: "Categoria"
+        name: "Nome"
         aias: "apelido"
       product:
         &default
@@ -56,6 +56,11 @@ pt-BR:
               minimun: "Quantidade minima é zero"
             price:
               minimun: "Menor valor é zero"
+
+  menu:
+    home: "Início"
+    profile: "Perfil"
+    cart: "Carrinho"
 
 
   views:

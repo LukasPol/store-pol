@@ -11,6 +11,26 @@
   </head>
 
   <body data-flash-messages="<%= JSON.dump(flash.to_a) %>">
+    <nav class="navbar navbar-expand-md navbar-light bg-info px-5 font-title">
+      <%= link_to t(:company_slogan), root_path, class: 'text-dark h2' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto font-menu">
+          <li class="nav-item active">
+            <%= link_to t(:home), root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t(:profile), root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t(:cart), root_path, class: 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 p-5">
