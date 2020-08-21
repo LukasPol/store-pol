@@ -3,6 +3,13 @@ pt-BR:
   are_you_sure: "Tem certeza"
   buy: "Comprar"
 
+  deleted: "%{model} foi deletado com sucesso."
+  deleted_f: "%{model} foi deletada com sucesso."
+  edit_model: "Editar %{model}"
+  editing_model: "Editando %{model}"
+  updated: "%{model} foi atualizado com sucesso."
+  updated_f: "%{model} foi atualizada com sucesso."
+
   back: "Voltar"
   close: "Fechar"
   destroy: "Deletar"
@@ -18,8 +25,8 @@ pt-BR:
   activerecord:
     models:
       category: "Categoria"
-      product: "produto"
-      user: "usuario"
+      product: "Produto"
+      user: "Usuário"
       client:
         one: Cliente
         other: Clientes
@@ -45,6 +52,7 @@ pt-BR:
       user:
         &default
         email: "Email"
+        current_password: "Senha atual"
         password: "Senha"
         password_confirmation: "Repita a senha"
         fullname: "Nome completo"
@@ -52,6 +60,14 @@ pt-BR:
       models:
         product:
           attributes:
+            email:
+              blank: "Em branco"
+            current_password:
+              blank: "Em branco"
+            password:
+              too_short: "Senha muito curta"
+            passwrod_confirmation:
+              confimartion: "As senhas devem está iguais"
             quantity:
               minimun: "Quantidade minima é zero"
             price:
@@ -59,7 +75,7 @@ pt-BR:
 
   menu:
     home: "Início"
-    profile: "Perfil"
+    profile: "Meu Perfil"
     cart: "Carrinho"
 
 
@@ -252,6 +268,8 @@ pt-BR:
     - :day
     - :month
     - :year
+    formats:
+      default: "%d/%m/%Y"
   datetime:
     distance_in_words:
       about_x_hours:
@@ -298,3 +316,6 @@ pt-BR:
       day: Dia
       month: Mês
       year: Ano
+  time:
+    formats:
+      default: "%H:%M - %d/%m/%Y"

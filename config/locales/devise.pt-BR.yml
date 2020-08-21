@@ -2,6 +2,12 @@
 # pt-BR translations for Devise
 pt-BR:
   devise:
+    cancel_account:
+      text: "Cancelar minha conta"
+      unhappy: "Não está feliz?"
+    change_password_hints:
+      new_password: "Deixe em branco se não quiser mudar"
+      current_password: "Nós precisamos da sua senha atual para confirmar as mudanças "
     confirmations:
       confirmed: "Sua conta foi confirmada com sucesso. Você está logado."
       send_instructions: "Dentro de minutos, você receberá um e-mail com instruções para a confirmação da sua conta."
