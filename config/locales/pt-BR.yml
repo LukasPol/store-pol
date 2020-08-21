@@ -48,6 +48,15 @@ pt-BR:
         password: "Senha"
         password_confirmation: "Repita a senha"
         fullname: "Nome completo"
+    errors:
+      models:
+        product:
+          attributes:
+            quantity:
+              minimun: "Quantidade minima é zero"
+            price:
+              minimun: "Menor valor é zero"
+
 
   views:
   datetime:

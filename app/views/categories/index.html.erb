@@ -11,7 +11,7 @@
   <tbody>
     <% @categories.each do |category| %>
       <tr>
-        <td><%= category.name %></td>
+        <td><%= category.name.capitalize %></td>
         <td><%= link_to t(:show), category_path(alias: category.alias) %></td>
       </tr>
     <% end %>

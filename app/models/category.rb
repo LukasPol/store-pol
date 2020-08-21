@@ -7,7 +7,6 @@ class Category < ApplicationRecord
   validates :name, presence: true
 
   before_create do
-    self.name = self.name.downcase
-    self.alias = self.name.try(:parameterize)
+    self.alias = self.name.downcase.try(:parameterize)
   end
 end

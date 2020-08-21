@@ -1,6 +1,7 @@
-<p>
-  <strong><%= t(:name, scope: 'activerecord.attributes.category')%>:</strong>
-  <%= @category.name %>
-</p>
+<h2><%= @category.name.capitalize %></h2>
 
-<%= render @products %>
+<hr class="w-100">
+
+<div class="row">
+  <%= render @products %>
+</div>
