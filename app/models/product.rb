@@ -6,7 +6,6 @@ class Product < ApplicationRecord
   validates :name, :description, :price, :quantity, presence: true
 
   validate :validate_price_n_quantity
-  # validates :validate_price_n_quantity
 
   before_create do
     self.alias = self.name.try(:parameterize)
