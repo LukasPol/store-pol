@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
   belongs_to :category
 
+  has_many :comments, dependent: :destroy
+
   has_one_attached :photo
 
   validates :name, :description, :price, :quantity, presence: true

@@ -1,0 +1,19 @@
+<div class="comment mb-3">
+  <div class="d-flex align-items-center">
+    <%= link_to myprofile_path(comment.user), class: "avatar mr-3" do %>
+      <%= user_avatar(comment.user) %>
+    <% end %>
+    <h4 class="mb-0"><%= comment.user.firstname %></h4>
+  </div>
+
+  <section class="body p-3">
+    <%= comment.body %>
+  </section>
+
+  <section class="d-flex justify-content-between">
+    <p class="text-muted"><%= time_ago_in_words(comment.created_at) %> atrás</p>
+    <% if current_user == comment.user%>
+      <%= link_to t(:destroy), comment, method: :delete, data: { confirm: t(:are_you_sure) } %>
+    <% end %>
+  </section>
+</div>

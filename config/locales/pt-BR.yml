@@ -3,6 +3,8 @@ pt-BR:
   are_you_sure: "Tem certeza"
   buy: "Comprar"
 
+  added: "%{model} foi adicionado com sucesso."
+  added_f: "%{model} foi adicionado com sucesso."
   deleted: "%{model} foi deletado com sucesso."
   deleted_f: "%{model} foi deletada com sucesso."
   edit_model: "Editar %{model}"
@@ -29,6 +31,7 @@ pt-BR:
   activerecord:
     models:
       category: "Categoria"
+      comment: "Comentario"
       product: "Produto"
       user: "Usuário"
       client:
@@ -42,6 +45,9 @@ pt-BR:
         &default
         name: "Nome"
         aias: "apelido"
+      comment:
+        &default
+        body: "comentário"
       product:
         &default
         aias: "apelido"
