@@ -10,7 +10,11 @@
     </h3>
     <p><%= t(:text_quantity, scope: 'activerecord.attributes.product', quantity: @product.quantity).pluralize %> </p>
     <br>
-    <button class="btn btn-primary"><%= t(:buy) %></button>
+    <% if current_user %>
+      <%= link_to t(:add_on_cart), create_carts_path(@product), method: :post, class: 'btn btn-primary', remote: true %>
+    <% else %>
+      <p>Faça login para comprar, <%= link_to 'Fazer Login', new_user_session_path %></p>
+    <% end %>
   </div>
 </div>
 

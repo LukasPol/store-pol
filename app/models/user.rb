@@ -25,6 +25,7 @@ class User < ApplicationRecord
   belongs_to :gender
 
   has_many :comments, dependent: :destroy
+  has_many :carts
 
   has_one_attached :avatar
 

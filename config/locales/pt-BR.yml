@@ -2,6 +2,7 @@ pt-BR:
   company_slogan: "Store Pol"
   are_you_sure: "Tem certeza"
   buy: "Comprar"
+  add_on_cart: "Adicionar no carrinho"
 
   added: "%{model} foi adicionado com sucesso."
   added_f: "%{model} foi adicionado com sucesso."
@@ -31,6 +32,7 @@ pt-BR:
   activerecord:
     models:
       category: "Categoria"
+      cart: "Carrrinho"
       comment: "Comentario"
       product: "Produto"
       user: "Usuário"
@@ -56,6 +58,7 @@ pt-BR:
         price: "Preço"
         quantity: "Quantidade"
         text_quantity: "%{quantity} quantidade"
+        image: "Imagem"
       client:
         name: "Nome"
         company_name: "Nome da Empresa"
