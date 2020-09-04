@@ -36,6 +36,7 @@ pt-BR:
       comment: "Comentario"
       product: "Produto"
       user: "Usuário"
+      order: "Pedido"
       client:
         one: Cliente
         other: Clientes
@@ -62,6 +63,9 @@ pt-BR:
       client:
         name: "Nome"
         company_name: "Nome da Empresa"
+      order:
+        product: "Produto"
+        status: "Status"
       user:
         &default
         email: "Email"

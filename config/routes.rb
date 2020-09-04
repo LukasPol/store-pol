@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :orders
-  resources :comments
   root to: 'categories#index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -9,12 +7,15 @@ Rails.application.routes.draw do
 
   resources :categories, path: 'categoria', only: [:index, :show], param: :alias
   resources :products, path: 'produto', only: [:index, :show], param: :alias
+  resources :comments
 
   resources :carts, only: [:index] do
     collection do 
       post '/cart/:product_id', to: 'carts#create', as: :create
     end
   end
+
+  resources :orders, only: [:index, :create, :show, :delete]
 
   # resources :profile, 
   get 'myprofile', to: 'profile#show'

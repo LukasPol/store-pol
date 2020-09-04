@@ -1,12 +1,4 @@
-<p id="notice"><%= notice %></p>
-
 <h1><%= t(:cart, scope: 'activerecord.models')%></h1>
-
-
-
-
-
-
 
 <table>
   <thead>
@@ -14,7 +6,6 @@
       <th><%= t(:image, scope: 'activerecord.attributes.product') %></th>
       <th><%= t(:name, scope: 'activerecord.attributes.product') %></th>
       <th><%= t(:price, scope: 'activerecord.attributes.product') %></th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -33,4 +24,4 @@
 <p>Total: <%= @value %></p>
 <br>
 
-<%= link_to t(:buy), order_path %>
+<%= link_to t(:buy), orders_path, method: :post%>

@@ -1,0 +1,28 @@
+<h1><%= t(:order, scope: 'activerecord.models').pluralize %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t(:image, scope: 'activerecord.attributes.product') %></th>
+      <th><%= t(:name, scope: 'activerecord.attributes.product') %></th>
+      <th><%= t(:price, scope: 'activerecord.attributes.product') %></th>
+      <th><%= t(:status, scope: 'activerecord.attributes.order') %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= image_tag(order.product.photo, height: '50') %></td>
+        <td><%= order.product.name %></td>
+        <td><%= order.product.price %></td>
+        <td><%= order.status %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
