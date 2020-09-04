@@ -1,12 +1,13 @@
 class Product < ApplicationRecord
   belongs_to :category
 
+  has_many :comments, dependent: :destroy
+
   has_one_attached :photo
 
   validates :name, :description, :price, :quantity, presence: true
 
   validate :validate_price_n_quantity
-  # validates :validate_price_n_quantity
 
   before_create do
     self.alias = self.name.try(:parameterize)

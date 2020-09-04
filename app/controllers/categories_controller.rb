@@ -3,12 +3,14 @@ class CategoriesController < ApplicationController
 
   # GET /categories
   def index
-    @categories = Category.all
+    @q = Category.all.ransack(params[:q])
+    @categories = @q.result(distinct: true)
   end
 
   # GET /categories/1
   def show
-    @products = @category.products
+    @q = @category.products.ransack(params[:q])
+    @products = @q.result(distinct: true)
   end
 
   private

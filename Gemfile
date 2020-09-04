@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -33,6 +33,7 @@ gem 'simple_form', '5.0.2'
 gem 'ransack', '2.3.2'
 gem 'rails_admin', '~> 2.0'
 gem 'rails_admin_rollincode', '~> 1.0'
+# gem 'actiontext', '~> 6.0.0.rc1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

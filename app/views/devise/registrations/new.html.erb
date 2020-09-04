@@ -10,10 +10,11 @@
                 input_html: { autocomplete: "email" }%>
     
     <%= f.input :fullname %>
+    <%= f.input :avatar, as: :file %>
     <%= f.input :cpf, required: true %>
     <%= f.input :birthday %>
     <%= f.input :phone, as: :tel %>
-    <%= f.input :gender, collection: Gender.all %>
+    <%= f.input :gender_id, collection: Gender.all %>
 
     <%= f.input :password,
                 required: true,

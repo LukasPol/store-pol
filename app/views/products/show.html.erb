@@ -3,16 +3,45 @@
     <%= image_tag(@product.photo, height: '200') %>
   </div>
   <div class="col-7">
-    <h4 class="text-muted"><%= @product.name %></h4>
+    <h2 class="text-muted"><%= @product.name.capitalize %></h2>
     <p><%= @product.description %></p>
     <h3 class="my-3 font-weight-bold">
       <%= number_to_currency(@product.price, unit: 'R$', separator: ',', delimiter: "") %>
     </h3>
     <p><%= t(:text_quantity, scope: 'activerecord.attributes.product', quantity: @product.quantity).pluralize %> </p>
     <br>
-    <button class="btn btn-primary"><%= t(:buy) %></button>
+    <% if current_user %>
+      <%= link_to t(:add_on_cart), create_carts_path(@product), method: :post, class: 'btn btn-primary', remote: true %>
+    <% else %>
+      <p>Faça login para comprar, <%= link_to 'Fazer Login', new_user_session_path %></p>
+    <% end %>
   </div>
 </div>
 
+<hr class="w-100">
 
-<%= link_to t(:back), category_path(@product.category.alias) %>
+<div class="w-50">
+  <h2><%= t(:comment, scope: 'activerecord.models').pluralize %></h2>
+
+  <% if @comments.any? %>
+    <%= render @comments %>
+  <% else %>
+    <p>Seja o primeiro a comentar</p>
+  <% end %>
+
+  <% if current_user %>
+    <%= simple_form_for(@comment) do |f| %>
+      <%= f.input_field :product_id, as: :hidden, value: @product.id %>
+
+      <div class="form-group">
+        <%= f.input :body, required: true, placeholder: 'Comentário', label: false %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit "Enviar comentário", class: 'btn btn-secondary' %>
+      </div>
+    <% end %>
+  <% else %>
+    <p>Faça login para comentar, <%= link_to 'Fazer Login', new_user_session_path %></p>
+  <% end %>
+</div>

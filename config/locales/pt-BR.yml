@@ -2,7 +2,10 @@ pt-BR:
   company_slogan: "Store Pol"
   are_you_sure: "Tem certeza"
   buy: "Comprar"
+  add_on_cart: "Adicionar no carrinho"
 
+  added: "%{model} foi adicionado com sucesso."
+  added_f: "%{model} foi adicionado com sucesso."
   deleted: "%{model} foi deletado com sucesso."
   deleted_f: "%{model} foi deletada com sucesso."
   edit_model: "Editar %{model}"
@@ -12,6 +15,7 @@ pt-BR:
 
   back: "Voltar"
   close: "Fechar"
+  clean: "Limpar"
   destroy: "Deletar"
   details: "Visualizar"
   edit: "Editar"
@@ -19,14 +23,20 @@ pt-BR:
   search: "Buscar"
   show: "Visualizar"
 
+  maximun: "Máximo"
+  minimun: "Mínimo"
+
   sign_in: "Entrar"
   sign_out: "Sair"
 
   activerecord:
     models:
       category: "Categoria"
+      cart: "Carrrinho"
+      comment: "Comentario"
       product: "Produto"
       user: "Usuário"
+      order: "Pedido"
       client:
         one: Cliente
         other: Clientes
@@ -38,17 +48,24 @@ pt-BR:
         &default
         name: "Nome"
         aias: "apelido"
+      comment:
+        &default
+        body: "comentário"
       product:
         &default
         aias: "apelido"
-        name: "Produto"
+        name: "Nome"
         description: "Descrição"
         price: "Preço"
         quantity: "Quantidade"
         text_quantity: "%{quantity} quantidade"
+        image: "Imagem"
       client:
         name: "Nome"
         company_name: "Nome da Empresa"
+      order:
+        product: "Produto"
+        status: "Status"
       user:
         &default
         email: "Email"

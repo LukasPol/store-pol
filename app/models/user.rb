@@ -23,4 +23,22 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :gender
+
+  has_many :comments, dependent: :destroy
+  has_many :carts
+  has_many :orders
+
+  has_one_attached :avatar
+
+  def user_avatar
+    if self.avatar.attached?
+      ActionController::Base.helpers.image_tag self.avatar,  size: '40x40'
+    else
+      ActionController::Base.helpers.image_pack_tag 'default-user.jpg', size: '40x40'
+    end
+  end
+
+  def firstname
+    self.fullname.partition(' ').first
+  end
 end
